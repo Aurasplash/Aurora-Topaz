@@ -10906,7 +10906,7 @@ INSERT INTO `mob_groups` VALUES (8978,4315,171,'Waughroon_Heavyshell',0,128,0,0,
 
 INSERT INTO `mob_groups` VALUES (1,1038,172,'Ding_Bats',330,0,654,0,0,1,3,0);
 -- INSERT INTO `mob_groups` VALUES (2,4053,172,'Tunnel_Worm',330,0,2501,0,0,75,79,0);
-INSERT INTO `mob_groups` VALUES (2,1520,172,'Giant_Amoeba',14400,0,963,0,0,3,5,0);
+INSERT INTO `mob_groups` VALUES (2,4053,172,'Tunnel_Worm',330,0,2501,0,0,1,3,0);
 -- INSERT INTO `mob_groups` VALUES (3,2763,172,'Mouse_Bat',330,0,1748,0,0,75,80,0);
 INSERT INTO `mob_groups` VALUES (3,2763,172,'Mouse_Bat',330,0,1747,0,0,2,4,0);
 -- INSERT INTO `mob_groups` VALUES (4,3371,172,'River_Crab',330,0,2103,0,0,75,78,0);

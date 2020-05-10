@@ -4385,7 +4385,7 @@ namespace charutils
 
     void SaveCharDeaths(CCharEntity* PChar, JOBTYPE job)
     {
-        DSP_DEBUG_BREAK_IF(job == JOB_NON || job >= MAX_JOBTYPE);
+        TPZ_DEBUG_BREAK_IF(job == JOB_NON || job >= MAX_JOBTYPE);
 
         const char* Query = "UPDATE char_deaths SET %s = %u, deathcount = %u, levelslost = %u WHERE charid = %u";
 
