@@ -604,6 +604,42 @@ namespace charutils
             PChar->jobs.job[JOB_RUN] = (uint8)Sql_GetIntData(SqlHandle, 23);
         }
 
+        //Aurora Relevel System
+        fmtQuery = "SELECT deathcount, levelslost, war, mnk, whm, blm, rdm, thf, pld, drk, bst, brd, rng, sam, nin, drg, smn, blu, cor, pup, dnc, sch, geo, run "
+            "FROM char_deaths "
+            "WHERE charid = %u;";
+        ret = Sql_Query(SqlHandle, fmtQuery, PChar->id);
+        if (ret != SQL_ERROR &&
+            Sql_NumRows(SqlHandle) != 0 &&
+            Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+        {
+            PChar->jobs.deathcount = (uint32)Sql_GetUIntData(SqlHandle, 0);
+            PChar->jobs.levelslost = (uint8)Sql_GetUIntData(SqlHandle, 1);
+            PChar->jobs.deaths[JOB_WAR] = (uint8)Sql_GetIntData(SqlHandle, 2);
+            PChar->jobs.deaths[JOB_MNK] = (uint8)Sql_GetIntData(SqlHandle, 3);
+            PChar->jobs.deaths[JOB_WHM] = (uint8)Sql_GetIntData(SqlHandle, 4);
+            PChar->jobs.deaths[JOB_BLM] = (uint8)Sql_GetIntData(SqlHandle, 5);
+            PChar->jobs.deaths[JOB_RDM] = (uint8)Sql_GetIntData(SqlHandle, 6);
+            PChar->jobs.deaths[JOB_THF] = (uint8)Sql_GetIntData(SqlHandle, 7);
+            PChar->jobs.deaths[JOB_PLD] = (uint8)Sql_GetIntData(SqlHandle, 8);
+            PChar->jobs.deaths[JOB_DRK] = (uint8)Sql_GetIntData(SqlHandle, 9);
+            PChar->jobs.deaths[JOB_BST] = (uint8)Sql_GetIntData(SqlHandle, 10);
+            PChar->jobs.deaths[JOB_BRD] = (uint8)Sql_GetIntData(SqlHandle, 11);
+            PChar->jobs.deaths[JOB_RNG] = (uint8)Sql_GetIntData(SqlHandle, 12);
+            PChar->jobs.deaths[JOB_SAM] = (uint8)Sql_GetIntData(SqlHandle, 13);
+            PChar->jobs.deaths[JOB_NIN] = (uint8)Sql_GetIntData(SqlHandle, 14);
+            PChar->jobs.deaths[JOB_DRG] = (uint8)Sql_GetIntData(SqlHandle, 15);
+            PChar->jobs.deaths[JOB_SMN] = (uint8)Sql_GetIntData(SqlHandle, 16);
+            PChar->jobs.deaths[JOB_BLU] = (uint8)Sql_GetIntData(SqlHandle, 17);
+            PChar->jobs.deaths[JOB_COR] = (uint8)Sql_GetIntData(SqlHandle, 18);
+            PChar->jobs.deaths[JOB_PUP] = (uint8)Sql_GetIntData(SqlHandle, 19);
+            PChar->jobs.deaths[JOB_DNC] = (uint8)Sql_GetIntData(SqlHandle, 20);
+            PChar->jobs.deaths[JOB_SCH] = (uint8)Sql_GetIntData(SqlHandle, 21);
+            PChar->jobs.deaths[JOB_GEO] = (uint8)Sql_GetIntData(SqlHandle, 22);
+            PChar->jobs.deaths[JOB_RUN] = (uint8)Sql_GetIntData(SqlHandle, 23);
+        }
+        //Aurora End Relevel System
+
         fmtQuery = "SELECT mode, war, mnk, whm, blm, rdm, thf, pld, drk, bst, brd, rng, sam, nin, drg, smn, blu, cor, pup, dnc, sch, geo, run, merits, limits "
             "FROM char_exp "
             "WHERE charid = %u;";
@@ -3089,13 +3125,13 @@ namespace charutils
     {
         uint32 baseExp = GetRealExp(charlvl, moblvl);
 
-        if (baseExp >= 400) return EMobDifficulty::IncrediblyTough;
-        if (baseExp >= 350) return EMobDifficulty::VeryTough;
-        if (baseExp >= 220) return EMobDifficulty::Tough;
-        if (baseExp >= 200) return EMobDifficulty::EvenMatch;
-        if (baseExp >= 160) return EMobDifficulty::DecentChallenge;
-        if (baseExp >= 60) return EMobDifficulty::EasyPrey;
-        if (baseExp >= 14) return EMobDifficulty::IncrediblyEasyPrey;
+        if (baseExp >= 430) return EMobDifficulty::IncrediblyTough;
+        if (baseExp >= 240) return EMobDifficulty::VeryTough;
+        if (baseExp >= 120) return EMobDifficulty::Tough;
+        if (baseExp >= 100) return EMobDifficulty::EvenMatch;
+        if (baseExp >= 61) return EMobDifficulty::DecentChallenge;
+        if (baseExp >= 15) return EMobDifficulty::EasyPrey;
+        if (baseExp >= 1) return EMobDifficulty::IncrediblyEasyPrey;
 
         return EMobDifficulty::TooWeak;
     }
@@ -3298,12 +3334,12 @@ namespace charutils
                         switch (pcinzone)
                         {
                             case 1: exp *= 1.00f; break;
-                            case 2: exp *= 0.75f; break;
-                            case 3: exp *= 0.55f; break;
-                            case 4: exp *= 0.45f; break;
-                            case 5: exp *= 0.39f; break;
-                            case 6: exp *= 0.35f; break;
-                            default: exp *= (1.8f / pcinzone); break;
+                            case 2: exp *= 0.90f; break;
+                            case 3: exp *= 0.70f; break;
+                            case 4: exp *= 0.60f; break;
+                            case 5: exp *= 0.54f; break;
+                            case 6: exp *= 0.50f; break;
+                            default: exp *= (2.5f / pcinzone); break;
                         }
                     }
                     else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && region >= 28 && region <= 32)
@@ -3311,12 +3347,12 @@ namespace charutils
                         switch (pcinzone)
                         {
                             case 1: exp *= 1.00f; break;
-                            case 2: exp *= 0.75f; break;
-                            case 3: exp *= 0.55f; break;
-                            case 4: exp *= 0.45f; break;
-                            case 5: exp *= 0.39f; break;
-                            case 6: exp *= 0.35f; break;
-                            default: exp *= (1.8f / pcinzone); break;
+                            case 2: exp *= 0.90f; break;
+                            case 3: exp *= 0.70f; break;
+                            case 4: exp *= 0.60f; break;
+                            case 5: exp *= 0.54f; break;
+                            case 6: exp *= 0.50f; break;
+                            default: exp *= (2.5f / pcinzone); break;
                         }
 
                     }
@@ -3325,12 +3361,12 @@ namespace charutils
                         switch (pcinzone)
                         {
                             case 1: exp *= 1.00f; break;
-                            case 2: exp *= 0.60f; break;
-                            case 3: exp *= 0.45f; break;
-                            case 4: exp *= 0.40f; break;
-                            case 5: exp *= 0.37f; break;
-                            case 6: exp *= 0.35f; break;
-                            default: exp *= (1.8f / pcinzone); break;
+                            case 2: exp *= 0.70f; break;
+                            case 3: exp *= 0.60f; break;
+                            case 4: exp *= 0.55f; break;
+                            case 5: exp *= 0.52f; break;
+                            case 6: exp *= 0.50f; break;
+                            default: exp *= (2.5f / pcinzone); break;
                         }
                     }
 
@@ -3361,11 +3397,11 @@ namespace charutils
                         {
                             case 0: exp *= 1.0f; break;
                             case 1: exp *= 1.2f; break;
-                            case 2: exp *= 1.25f; break;
-                            case 3: exp *= 1.3f; break;
-                            case 4: exp *= 1.4f; break;
-                            case 5: exp *= 1.5f; break;
-                            default: exp *= 1.55f; break;
+                            case 2: exp *= 1.4f; break;
+                            case 3: exp *= 1.6f; break;
+                            case 4: exp *= 1.8f; break;
+                            case 5: exp *= 2.0f; break;
+                            default: exp *= 2.1f; break;
                         }
                     }
                     else
@@ -3472,6 +3508,20 @@ namespace charutils
                         }
                     }
 
+                    //Aurora Relevel System
+                    if (PMember->jobs.job[PMember->GetMJob()] < PMember->jobs.deaths[PMember->GetMJob()])
+                    {
+                        if (PMember->jobs.deaths[PMember->GetMJob()] == 75)
+                        {
+                            exp *= 10;
+                        }
+                        else
+                        {
+                            exp = exp + ((exp * PMember->jobs.deaths[PMember->GetMJob()]) / 10);
+                        }
+                    }
+                    //Aurora End Relevel System
+
                     // pet or companion exp penalty needs to be added here
                     if (distance(PMember->loc.p, PMob->loc.p) > 100)
                     {
@@ -3518,6 +3568,9 @@ namespace charutils
             exploss = (uint16)(exploss * map_config.exp_loss_rate);
         }
 
+        exploss = 60000;
+        PChar->jobs.deathcount += 1; //Aurora Relevel Death Tracker
+
         if (PChar->jobs.exp[PChar->GetMJob()] < exploss)
         {
             if (PChar->jobs.job[PChar->GetMJob()] > 1)
@@ -3526,7 +3579,17 @@ namespace charutils
                 int32 lowerLevelMaxExp = GetExpNEXTLevel(PChar->jobs.job[PChar->GetMJob()] - 1);
                 exploss -= PChar->jobs.exp[PChar->GetMJob()];
                 PChar->jobs.exp[PChar->GetMJob()] = std::max(0, lowerLevelMaxExp - exploss);
-                PChar->jobs.job[PChar->GetMJob()] -= 1;
+                // PChar->jobs.job[PChar->GetMJob()] -= 1;
+                //Aurora Relevel System
+                PChar->jobs.levelslost += (PChar->jobs.job[PChar->GetMJob()] - 1);
+                if (PChar->jobs.job[PChar->GetMJob()] > PChar->jobs.deaths[PChar->GetMJob()])
+                {
+                    PChar->jobs.deaths[PChar->GetMJob()] = PChar->jobs.job[PChar->GetMJob()];
+                }
+                //Aurora End Relevel System
+
+                PChar->jobs.job[PChar->GetMJob()] = 1; //Aurora Hardcore Mode
+                PChar->jobs.exp[PChar->GetMJob()] = 0; //Aurora Hardcore Mode
 
                 if (PChar->m_LevelRestriction == 0 || PChar->jobs.job[PChar->GetMJob()] < PChar->m_LevelRestriction)
                 {
@@ -3561,7 +3624,8 @@ namespace charutils
                 {
                     if (PChar->PParty->GetSyncTarget() == PChar)
                     {
-                        PChar->PParty->RefreshSync();
+                        // Aurora Syncee Death everyone Resyncs to lvl 1 Fix. Next is to make it Desync the party here Instead (1 line)
+                        // PChar->PParty->RefreshSync();
                     }
                     PChar->PParty->ReloadParty();
                 }
@@ -3580,6 +3644,7 @@ namespace charutils
             PChar->jobs.exp[PChar->GetMJob()] -= exploss;
         }
 
+        SaveCharDeaths(PChar, PChar->GetMJob()); //Aurora Relevel System
         SaveCharExp(PChar, PChar->GetMJob());
         PChar->pushPacket(new CCharStatsPacket(PChar));
     }
@@ -4310,6 +4375,54 @@ namespace charutils
             PChar->updatemask |= UPDATE_HP;
             SaveMenuConfigFlags(PChar);
         }
+    }
+
+    /************************************************************************
+    *                                                                       *
+    *  Aurora Save Deaths for Relevel System                                *
+    *                                                                       *
+    ************************************************************************/
+
+    void SaveCharDeaths(CCharEntity* PChar, JOBTYPE job)
+    {
+        TPZ_DEBUG_BREAK_IF(job == JOB_NON || job >= MAX_JOBTYPE);
+
+        const char* Query = "UPDATE char_deaths SET %s = %u, deathcount = %u, levelslost = %u WHERE charid = %u";
+
+        std::string jobstring;
+
+        switch (job)
+        {
+        case JOB_WAR: jobstring = "war"; break;
+        case JOB_MNK: jobstring = "mnk"; break;
+        case JOB_WHM: jobstring = "whm"; break;
+        case JOB_BLM: jobstring = "blm"; break;
+        case JOB_RDM: jobstring = "rdm"; break;
+        case JOB_THF: jobstring = "thf"; break;
+        case JOB_PLD: jobstring = "pld"; break;
+        case JOB_DRK: jobstring = "drk"; break;
+        case JOB_BST: jobstring = "bst"; break;
+        case JOB_BRD: jobstring = "brd"; break;
+        case JOB_RNG: jobstring = "rng"; break;
+        case JOB_SAM: jobstring = "sam"; break;
+        case JOB_NIN: jobstring = "nin"; break;
+        case JOB_DRG: jobstring = "drg"; break;
+        case JOB_SMN: jobstring = "smn"; break;
+        case JOB_BLU: jobstring = "blu"; break;
+        case JOB_COR: jobstring = "cor"; break;
+        case JOB_PUP: jobstring = "pup"; break;
+        case JOB_DNC: jobstring = "dnc"; break;
+        case JOB_SCH: jobstring = "sch"; break;
+        case JOB_GEO: jobstring = "geo"; break;
+        case JOB_RUN: jobstring = "run"; break;
+        default: return; break;
+        }
+        Sql_Query(SqlHandle, Query,
+            jobstring,
+            PChar->jobs.deaths[job],
+            PChar->jobs.deathcount,
+            PChar->jobs.levelslost,
+            PChar->id);
     }
 
     /************************************************************************

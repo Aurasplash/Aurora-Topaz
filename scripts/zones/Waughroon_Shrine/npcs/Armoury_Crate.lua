@@ -258,9 +258,9 @@ local loot =
     -- KSNM The Hills are Alive
     [76] =
     {
-        {
-            {itemid =  3343, droprate = 1000}, -- Blue Pondweed
-        },
+        -- {
+        --     {itemid =  3343, droprate = 1000}, -- Blue Pondweed
+        -- },
         {
             {itemid = 18047, droprate =  188}, -- Havoc Scythe
             {itemid = 17939, droprate =   27}, -- Kriegsbeil
