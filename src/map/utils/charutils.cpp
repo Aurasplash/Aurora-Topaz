@@ -3376,6 +3376,7 @@ namespace charutils
                         exp *= monsterbonus;
                     }
 
+                    /*
                     // Per monster caps pulled from: https://ffxiclopedia.fandom.com/wiki/Experience_Points
                     if (PMember->GetMLevel() <= 50)
                     {
@@ -3389,6 +3390,7 @@ namespace charutils
                     {
                         exp = std::fmin(exp, 600.f);
                     }
+                    */
 
                     if (PMember->expChain.chainTime > gettick() || PMember->expChain.chainTime == 0)
                     {
