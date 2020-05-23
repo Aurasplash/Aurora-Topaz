@@ -694,9 +694,9 @@ INSERT INTO `item_equipment` VALUES (10919,'tndm._necklace_+1',75,0,4194303,0,0,
 INSERT INTO `item_equipment` VALUES (10920,'tndm._necklace_+2',75,0,4194303,0,0,0,512,0);
 INSERT INTO `item_equipment` VALUES (10921,'tndm._necklace_+3',75,0,4194303,0,0,0,512,0);
 INSERT INTO `item_equipment` VALUES (10922,'tndm._necklace_+4',75,0,4194303,0,0,0,512,0);
-INSERT INTO `item_equipment` VALUES (10924,'chocobo_torque',81,0,4194303,0,0,0,512,0);
-INSERT INTO `item_equipment` VALUES (10925,'fishers_torque',81,0,4194303,0,0,0,512,0);
-INSERT INTO `item_equipment` VALUES (10926,'field_torque',81,0,4194303,0,0,0,512,0);
+INSERT INTO `item_equipment` VALUES (10924,'chocobo_torque',1,0,4194303,0,0,0,512,0);
+INSERT INTO `item_equipment` VALUES (10925,'fishers_torque',1,0,4194303,0,0,0,512,0);
+INSERT INTO `item_equipment` VALUES (10926,'field_torque',1,0,4194303,0,0,0,512,0);
 INSERT INTO `item_equipment` VALUES (10927,'genesis_locket',88,0,4194303,0,0,0,512,0);
 INSERT INTO `item_equipment` VALUES (10928,'ganeshas_mala',90,0,10368,0,0,0,512,0);
 INSERT INTO `item_equipment` VALUES (10929,'apathy_gorget',86,0,8641,0,0,0,512,0);
@@ -808,8 +808,8 @@ INSERT INTO `item_equipment` VALUES (11036,'enchntr._earring',94,0,4194303,0,0,0
 INSERT INTO `item_equipment` VALUES (11037,'earthcry_earring',93,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11038,'dragonkin_earring',95,0,8641,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11039,'brachyura_earring',91,0,4194303,0,0,0,6144,0);
-INSERT INTO `item_equipment` VALUES (11040,'terminus_earring',91,0,4194303,0,0,0,6144,0);
-INSERT INTO `item_equipment` VALUES (11041,'liminus_earring',91,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_equipment` VALUES (11040,'terminus_earring',1,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_equipment` VALUES (11041,'liminus_earring',1,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11042,'rebel_earring',50,0,6593,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11043,'giants_earring',30,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11044,'corybant_pearl',96,0,4194303,0,0,0,6144,0);
@@ -1442,7 +1442,7 @@ INSERT INTO `item_equipment` VALUES (11673,'demonry_ring',88,0,2369954,0,0,0,245
 INSERT INTO `item_equipment` VALUES (11674,'archon_ring',90,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_equipment` VALUES (11675,'fervor_ring',87,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_equipment` VALUES (11676,'flock_ring',87,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_equipment` VALUES (11677,'prouesse_ring',77,0,4194303,0,0,0,24576,0);
+INSERT INTO `item_equipment` VALUES (11677,'prouesse_ring',1,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_equipment` VALUES (11678,'flame_earring',76,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11679,'thunder_earring',76,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_equipment` VALUES (11680,'soil_earring',76,0,4194303,0,0,0,6144,0);
@@ -1532,9 +1532,9 @@ INSERT INTO `item_equipment` VALUES (11763,'beir_belt',89,0,4194303,0,0,0,1024,0
 INSERT INTO `item_equipment` VALUES (11764,'beir_belt_+1',89,0,4194303,0,0,0,1024,0);
 INSERT INTO `item_equipment` VALUES (11765,'sanctuary_obi',87,0,4194303,0,0,0,1024,0);
 INSERT INTO `item_equipment` VALUES (11766,'sanctuary_obi_+1',87,0,4194303,0,0,0,1024,0);
-INSERT INTO `item_equipment` VALUES (11767,'chocobo_rope',85,0,4194303,0,0,0,1024,0);
-INSERT INTO `item_equipment` VALUES (11768,'fishers_rope',85,0,4194303,0,0,0,1024,0);
-INSERT INTO `item_equipment` VALUES (11769,'field_rope',85,0,4194303,0,0,0,1024,0);
+INSERT INTO `item_equipment` VALUES (11767,'chocobo_rope',1,0,4194303,0,0,0,1024,0);
+INSERT INTO `item_equipment` VALUES (11768,'fishers_rope',1,0,4194303,0,0,0,1024,0);
+INSERT INTO `item_equipment` VALUES (11769,'field_rope',1,0,4194303,0,0,0,1024,0);
 INSERT INTO `item_equipment` VALUES (11770,'accursed_belt',86,0,212705,0,0,0,1024,0);
 INSERT INTO `item_equipment` VALUES (11771,'pipilaka_belt',87,0,4194303,0,0,0,1024,0);
 INSERT INTO `item_equipment` VALUES (11772,'oneiros_sash',88,0,1589276,0,0,0,1024,0);
