@@ -71,3 +71,13 @@ function onZoneWeatherChange(weather)
         mirrorPond:setStatus(tpz.status.DISAPPEAR)
     end
 end
+
+function onGameDay()
+    if VanadielDayElement() == 4 then -- Iceday
+        SpawnMob(17232652)
+    else
+        if GetMobByID(17232652):isAlive() then
+            DespawnMob(17232652)
+        end
+    end
+end

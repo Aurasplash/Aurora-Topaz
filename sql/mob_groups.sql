@@ -122,6 +122,8 @@ INSERT INTO `mob_groups` VALUES (49,576,2,'Bullheaded_Grosvez',0,128,0,0,0,40,40
 INSERT INTO `mob_groups` VALUES (50,2784,2,'Mycophile',0,128,1761,2500,0,30,35,0);
 INSERT INTO `mob_groups` VALUES (51,1934,2,'Hercules_Beetle',0,128,1303,2238,0,34,34,0);
 
+INSERT INTO `mob_groups` VALUES (101,2382,2,'La_Velue',86400,0,5010,0,0,40,40,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- Manaclipper (Zone 3)
 -- ------------------------------------------------------------
@@ -192,6 +194,8 @@ INSERT INTO `mob_groups` VALUES (47,895,4,'Dalham',0,128,0,9300,0,72,72,0);
 INSERT INTO `mob_groups` VALUES (48,3591,4,'Shen',0,128,2835,50000,0,84,86,0);
 INSERT INTO `mob_groups` VALUES (49,3592,4,'Shens_Filtrate',0,128,0,0,0,74,76,0);
 INSERT INTO `mob_groups` VALUES (50,4669,4,'Bismarck',0,128,0,0,9999,95,98,0);
+
+INSERT INTO `mob_groups` VALUES (101,3376,4,'Roc',86400,0,5013,0,0,40,40,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Uleguerand_Range (Zone 5)
@@ -7007,6 +7011,8 @@ INSERT INTO `mob_groups` VALUES (5670,3875,102,'Tenzen',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (5675,4488,102,'Zagh',1,0,0,0,0,1,1,0);
 INSERT INTO `mob_groups` VALUES (5676,4498,102,'Zeid',0,0,0,0,0,0,0,0);
 
+INSERT INTO `mob_groups` VALUES (101,636,102,'Carbuncle_Prime',0,128,5001,0,0,50,50,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- Valkurm_Dunes (Zone 103)
 -- ------------------------------------------------------------
@@ -7081,6 +7087,8 @@ INSERT INTO `mob_groups` VALUES (67,4693,103,'Ig-Alima',0,128,0,0,9999,119,120,0
 INSERT INTO `mob_groups` VALUES (68,1642,103,'Goblin_Bounty_Hunter',0,0,1030,0,0,17,20,0);
 INSERT INTO `mob_groups` VALUES (5684,1027,103,'Diabolos',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (5722,2403,103,'Lewenhart',0,0,0,0,0,0,0,0);
+
+INSERT INTO `mob_groups` VALUES (101,4647,103,'Garuda_Prime',0,128,5006,0,0,50,50,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Jugner_Forest (Zone 104)
@@ -7561,6 +7569,8 @@ INSERT INTO `mob_groups` VALUES (6149,2492,111,'Makki-Chebukki',0,0,0,0,0,0,0,0)
 INSERT INTO `mob_groups` VALUES (6151,2904,111,'Noillurie',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6155,3600,111,'Shikaree_Y',0,0,0,0,0,0,0,0);
 
+INSERT INTO `mob_groups` VALUES (101,4642,111,'Shiva_Prime',0,128,5007,0,0,50,50,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- Xarcabard (Zone 112)
 -- ------------------------------------------------------------
@@ -7725,6 +7735,8 @@ INSERT INTO `mob_groups` VALUES (58,677,114,'Centurio_XIII-V',0,128,0,0,0,55,55,
 INSERT INTO `mob_groups` VALUES (59,3484,114,'Satyral',1,0,0,0,0,1,1,0);
 INSERT INTO `mob_groups` VALUES (6273,1682,114,'Goblin_Leadman',0,128,0,0,0,50,55,0);
 
+INSERT INTO `mob_groups` VALUES (101,4644,114,'Titan_Prime',0,128,5004,0,0,50,50,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- West_Sarutabaruta (Zone 115)
 -- ------------------------------------------------------------
@@ -7782,6 +7794,8 @@ INSERT INTO `mob_groups` VALUES (6306,549,115,'Bryher',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6314,616,115,'Camlin',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6321,903,115,'Darach',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6340,3584,115,'Shantotto',0,0,0,0,0,0,0,0);
+
+INSERT INTO `mob_groups` VALUES (101,1322,115,'Fenrir_Prime',0,128,5002,0,0,50,50,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- East_Sarutabaruta (Zone 116)
@@ -8113,6 +8127,8 @@ INSERT INTO `mob_groups` VALUES (6621,2226,121,'Kilhwch',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6623,2405,121,'Lhu_Mhakaracca',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (6628,2904,121,'Noillurie',0,0,0,0,0,0,0,0);
 
+INSERT INTO `mob_groups` VALUES (101,4643,121,'Ramuh_Prime',0,128,5008,0,0,50,50,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- RoMaeve (Zone 122)
 -- ------------------------------------------------------------
@@ -8196,6 +8212,9 @@ INSERT INTO `mob_groups` VALUES (48,3441,123,'Sahagin_Patriarch',0,128,0,0,0,45,
 INSERT INTO `mob_groups` VALUES (49,2811,123,'Nasus',0,128,0,0,0,34,40,0);
 INSERT INTO `mob_groups` VALUES (50,2924,123,'Nutcracker',1,0,0,0,0,1,1,0);
 INSERT INTO `mob_groups` VALUES (51,6170,123,'Siren',0,128,0,0,0,80,80,0);
+
+INSERT INTO `mob_groups` VALUES (101,4645,123,'Ifrit_Prime',0,128,5003,0,0,50,50,0); -- Aurora Mob
+INSERT INTO `mob_groups` VALUES (102,4646,123,'Leviathan_Prime',0,128,5005,0,0,50,50,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Yhoator_Jungle (Zone 124)
@@ -9707,6 +9726,8 @@ INSERT INTO `mob_groups` VALUES (7954,896,147,'Dalzakk',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (7982,3992,147,'Treasure_Chest',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (7984,4498,147,'Zeid',0,0,0,0,0,0,0,0);
 
+INSERT INTO `mob_groups` VALUES (101,5734,147,'Rambukk',86400,0,5015,0,0,40,40,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- Qulun_Dome (Zone 148)
 -- ------------------------------------------------------------
@@ -9781,6 +9802,8 @@ INSERT INTO `mob_groups` VALUES (48,2980,149,'One-eyed_Gwajboj',0,128,1859,0,0,6
 INSERT INTO `mob_groups` VALUES (49,3902,149,'Three-eyed_Prozpuz',0,128,307,0,0,60,60,0);
 INSERT INTO `mob_groups` VALUES (50,1930,149,'Hematic_Cyst',0,128,0,0,0,40,40,0);
 INSERT INTO `mob_groups` VALUES (8047,3992,149,'Treasure_Chest',0,0,0,0,0,0,0,0);
+
+INSERT INTO `mob_groups` VALUES (101,105,149,'Amemet',86400,0,5014,0,0,40,40,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Monastic_Cavern (Zone 150)
@@ -9868,6 +9891,8 @@ INSERT INTO `mob_groups` VALUES (8085,2405,151,'Lhu_Mhakaracca',0,0,0,0,0,0,0,0)
 INSERT INTO `mob_groups` VALUES (8090,2904,151,'Noillurie',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (8094,3858,151,'Tebhi',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (8095,3992,151,'Treasure_Chest',0,0,0,0,0,0,0,0);
+
+INSERT INTO `mob_groups` VALUES (101,738,151,'Claret',86400,0,5009,0,0,40,40,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Altar_Room (Zone 152)
@@ -11980,6 +12005,8 @@ INSERT INTO `mob_groups` VALUES (53,252,193,'Aroma_Leech',0,128,172,0,0,44,48,0)
 INSERT INTO `mob_groups` VALUES (9651,3992,193,'Treasure_Chest',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (9655,4498,193,'Zeid',0,0,0,0,0,0,0,0);
 
+INSERT INTO `mob_groups` VALUES (101,1208,193,'Emergent_Elm',86400,0,5011,0,0,40,40,0); -- Aurora Mob
+
 -- ------------------------------------------------------------
 -- Outer_Horutoto_Ruins (Zone 194)
 -- ------------------------------------------------------------
@@ -12181,6 +12208,8 @@ INSERT INTO `mob_groups` VALUES (43,5311,196,'Lorbulcrud',0,128,0,0,99999,90,92,
 INSERT INTO `mob_groups` VALUES (9781,1518,196,'Ghoul',0,0,960,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (9799,3992,196,'Treasure_Chest',0,0,0,0,0,0,0,0);
 INSERT INTO `mob_groups` VALUES (9805,4498,196,'Zeid',0,0,0,0,0,0,0,0);
+
+INSERT INTO `mob_groups` VALUES (101,2111,196,'Ixtab',86400,0,5012,0,0,40,40,0); -- Aurora Mob
 
 -- ------------------------------------------------------------
 -- Crawlers_Nest (Zone 197)

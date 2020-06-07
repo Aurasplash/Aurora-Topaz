@@ -92,3 +92,13 @@ function onTOTDChange(TOTD)
         SetServerVariable("I_Can_Hear_a_Rainbow", 0);
     end
 end;
+
+function onGameDay()
+    if VanadielDayElement() == 6 then -- Lightday
+        SpawnMob(17195788)
+    else
+        if GetMobByID(17195788):isAlive() then
+            DespawnMob(17195788)
+        end
+    end
+end

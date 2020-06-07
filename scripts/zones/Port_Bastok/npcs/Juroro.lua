@@ -88,17 +88,28 @@ function onEventFinish(player,csid,option)
         elseif (option == 2) then item = 13244;  -- Earth Belt
         elseif (option == 3) then item = 13563;  -- Earth Ring
         elseif (option == 4) then item = 1205;     -- Desert Light
+        elseif (option >= 5) then item = 1258;     -- Earth Ore
         end
 
         if (player:getFreeSlotsCount() == 0 and (option ~= 5 or option ~= 6)) then
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,item);
         else
-            if (option == 5) then
-                player:addGil(GIL_RATE*10000);
-                player:messageSpecial(ID.text.GIL_OBTAINED,GIL_RATE*10000); -- Gils
-            elseif (option == 6) then
-                player:addSpell(299); -- Avatar Titan Spell
-                player:messageSpecial(ID.text.TITAN_UNLOCKED,0,0,1);
+            if (option >= 5) then
+                if (player:getCharVar("PrimeOre") > getConquestTally()) then
+                    player:setCharVar("PrimeOre", getConquestTally())
+                    player:addItem(item);
+                    player:messageSpecial(ID.text.ITEM_OBTAINED,item);
+                elseif (player:getCharVar("PrimeOre") <= 0) then
+                    player:setCharVar("PrimeOre", getConquestTally())
+                    player:addItem(item);
+                    player:messageSpecial(ID.text.ITEM_OBTAINED,item);
+                else
+                    player:addGil(GIL_RATE*10000);
+                    player:messageSpecial(ID.text.GIL_OBTAINED,GIL_RATE*10000); -- Gil
+                end
+            -- elseif (option == 6) then
+                -- player:addSpell(299); -- Avatar Titan Spell
+                -- player:messageSpecial(ID.text.TITAN_UNLOCKED,0,0,1);
             else
                 player:addItem(item);
                 player:messageSpecial(ID.text.ITEM_OBTAINED,item); -- Item

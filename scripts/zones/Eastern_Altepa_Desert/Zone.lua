@@ -60,3 +60,13 @@ function onEventFinish(player, csid, option)
         lightCutsceneFinish(player) -- Quest: I Can Hear A Rainbow
     end
 end
+
+function onGameDay()
+    if VanadielDayElement() == 1 then -- Earthday
+        SpawnMob(17244940)
+    else
+        if GetMobByID(17244940):isAlive() then
+            DespawnMob(17244940)
+        end
+    end
+end

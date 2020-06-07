@@ -74,3 +74,12 @@ function onEventFinish( player, csid, option)
         player:addMission(ASA, tpz.mission.id.asa.THAT_WHICH_CURDLES_BLOOD)
     end
 end
+
+function onGameDay()
+    if VanadielDayElement() == 7 then -- Darkday
+        SpawnMob(17249036)
+    else
+        if GetMobByID(17249036):isAlive() then
+            DespawnMob(17249036)
+        end
+    end

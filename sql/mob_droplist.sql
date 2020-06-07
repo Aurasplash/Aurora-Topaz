@@ -12320,7 +12320,7 @@ INSERT INTO `mob_droplist` VALUES (2373,0,0,1000,849,290);
 INSERT INTO `mob_droplist` VALUES (2374,0,0,1000,939,170);
 INSERT INTO `mob_droplist` VALUES (2375,0,0,1000,914,480);
 INSERT INTO `mob_droplist` VALUES (2375,0,0,1000,939,250);
-INSERT INTO `mob_droplist` VALUES (2375,0,0,1000,4717,1000);
+INSERT INTO `mob_droplist` VALUES (2375,0,0,1000,4717,500);
 INSERT INTO `mob_droplist` VALUES (2375,0,0,1000,15222,50);
 INSERT INTO `mob_droplist` VALUES (2376,0,0,1000,914,110);
 INSERT INTO `mob_droplist` VALUES (2376,0,0,1000,1165,40);
@@ -16537,6 +16537,22 @@ INSERT INTO `mob_droplist` VALUES (3138,0,0,1000,1875,1000); -- (Nergal, Bata, A
 INSERT INTO `mob_droplist` VALUES (3138,0,0,1000,1875,1000); -- (Nergal, Bata, Aeshma) ancient_beastcoin x 4
 INSERT INTO `mob_droplist` VALUES (3139,0,0,1000,1875,1000); -- (Apollyon Demon, Taurus, Ahriman) ancient_beastcoin x 1-2
 INSERT INTO `mob_droplist` VALUES (3139,0,0,1000,1875,500);  -- (Apollyon Demon, Taurus, Ahriman) ancient_beastcoin x 1-2
+
+INSERT INTO `mob_droplist` VALUES (5001,0,0,1000,1261,100); -- Aurora Carbuncle
+INSERT INTO `mob_droplist` VALUES (5002,0,0,1000,1262,100); -- Aurora Fenrir
+INSERT INTO `mob_droplist` VALUES (5003,0,0,1000,1255,100); -- Aurora Ifrit
+INSERT INTO `mob_droplist` VALUES (5004,0,0,1000,1258,100); -- Aurora Titan
+INSERT INTO `mob_droplist` VALUES (5005,0,0,1000,1260,100); -- Aurora Leviathan
+INSERT INTO `mob_droplist` VALUES (5006,0,0,1000,1257,100); -- Aurora Garuda
+INSERT INTO `mob_droplist` VALUES (5007,0,0,1000,1256,100); -- Aurora Shiva
+INSERT INTO `mob_droplist` VALUES (5008,0,0,1000,1259,100); -- Aurora Ramuh
+INSERT INTO `mob_droplist` VALUES (5009,0,0,1000,4714,100); -- Aurora Slime - Phalanx
+INSERT INTO `mob_droplist` VALUES (5010,0,0,1000,4900,100); -- Aurora Tiger - Thunder Spirit
+INSERT INTO `mob_droplist` VALUES (5011,0,0,1000,4947,100); -- Aurora Tree - Utsusemi: Ni
+INSERT INTO `mob_droplist` VALUES (5012,0,0,1000,4858,100); -- Aurora Ghost - Ice Spikes
+INSERT INTO `mob_droplist` VALUES (5013,0,0,1000,4751,100); -- Aurora Roc - Erase
+INSERT INTO `mob_droplist` VALUES (5014,0,0,1000,4896,100); -- Aurora Lizard - Fire Spirit
+INSERT INTO `mob_droplist` VALUES (5015,0,0,1000,4874,100); -- Aurora Ram - Absorb-STR
 
 /*!40000 ALTER TABLE `mob_droplist` ENABLE KEYS */;
 UNLOCK TABLES;

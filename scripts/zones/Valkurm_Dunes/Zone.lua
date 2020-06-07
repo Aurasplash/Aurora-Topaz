@@ -71,3 +71,13 @@ function onZoneWeatherChange(weather)
         qm1:setStatus(tpz.status.DISAPPEAR);
     end
 end;
+
+function onGameDay()
+    if VanadielDayElement() == 3 then -- Winday
+        SpawnMob(17199884)
+    else
+        if GetMobByID(17199884):isAlive() then
+            DespawnMob(17199884)
+        end
+    end
+end
