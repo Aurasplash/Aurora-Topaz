@@ -83,3 +83,4 @@ function onGameDay()
             DespawnMob(17249036)
         end
     end
+end
