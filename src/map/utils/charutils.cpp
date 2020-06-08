@@ -3362,6 +3362,20 @@ namespace charutils
                         }
 
                     }
+                       else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && region >= 33 && region <= 40)
+                    {
+                        switch (pcinzone)
+                        {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.90f; break;
+                            case 3: exp *= 0.70f; break;
+                            case 4: exp *= 0.60f; break;
+                            case 5: exp *= 0.54f; break;
+                            case 6: exp *= 0.50f; break;
+                            default: exp *= (2.5f / pcinzone); break;
+                        }
+
+                    }
                     else
                     {
                         switch (pcinzone)
