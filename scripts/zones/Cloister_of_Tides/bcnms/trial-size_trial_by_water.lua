@@ -36,6 +36,8 @@ function onEventFinish(player, csid, option)
         if not player:hasSpell(300) then
             player:addSpell(300)
             player:messageSpecial(ID.text.LEVIATHAN_UNLOCKED, 0, 0, 2)
+            player:addItem(1260);
+            player:messageSpecial(ID.text.ITEM_OBTAINED,1260);
         end
         if not player:hasItem(4181) then
             player:addItem(4181) -- Scroll of instant warp

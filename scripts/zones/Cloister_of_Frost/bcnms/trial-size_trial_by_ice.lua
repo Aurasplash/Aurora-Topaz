@@ -36,6 +36,8 @@ function onEventFinish(player, csid, option)
         if not player:hasSpell(302) then
             player:addSpell(302)
             player:messageSpecial(ID.text.SHIVA_UNLOCKED, 0, 0, 4)
+            player:addItem(1256);
+            player:messageSpecial(ID.text.ITEM_OBTAINED,1256);
         end
         if not player:hasItem(4181) then
             player:addItem(4181) -- Scroll of instant warp

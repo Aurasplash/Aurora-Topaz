@@ -36,6 +36,8 @@ function onEventFinish(player, csid, option)
         if not player:hasSpell(303) then
             player:addSpell(303)
             player:messageSpecial(ID.text.RAMUH_UNLOCKED, 0, 0, 5)
+            player:addItem(1259);
+            player:messageSpecial(ID.text.ITEM_OBTAINED,1259);
         end
         if not player:hasItem(4181) then
             player:addItem(4181) -- Scroll of instant warp

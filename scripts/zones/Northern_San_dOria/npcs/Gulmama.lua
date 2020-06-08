@@ -74,13 +74,13 @@ function onEventFinish(player,csid,option)
         elseif (option == 2) then item = 13242;  -- Ice Belt
         elseif (option == 3) then item = 13561;  -- Ice Ring
         elseif (option == 4) then item = 1207;     -- Rust 'B' Gone
-        elseif (option >= 5) then item = 1256;     -- Ice Ore
+        elseif (option == 5) then item = 1256;     -- Ice Ore
         end
 
         if (player:getFreeSlotsCount() == 0 and (option ~= 5 or option ~= 6)) then
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,item);
         else
-            if (option >= 5) then
+            if (option == 5) then
                 if (player:getCharVar("PrimeOre") > getConquestTally()) then
                     player:setCharVar("PrimeOre", getConquestTally())
                     player:addItem(item);
@@ -93,9 +93,9 @@ function onEventFinish(player,csid,option)
                     player:addGil(GIL_RATE*10000);
                     player:messageSpecial(ID.text.GIL_OBTAINED,GIL_RATE*10000); -- Gil
                 end
-            -- elseif (option == 6) then
-                -- player:addSpell(302); -- Avatar
-                -- player:messageSpecial(ID.text.SHIVA_UNLOCKED,0,0,4);
+            elseif (option == 6) then
+                player:addSpell(302); -- Avatar
+                player:messageSpecial(ID.text.SHIVA_UNLOCKED,0,0,4);
             else
                 player:addItem(item);
                 player:messageSpecial(ID.text.ITEM_OBTAINED,item); -- Item

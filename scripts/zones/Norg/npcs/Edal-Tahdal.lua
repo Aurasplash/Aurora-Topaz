@@ -65,13 +65,13 @@ function onEventFinish(player,csid,option)
         elseif (option == 2) then item = 13246;  -- Water Belt
         elseif (option == 3) then item = 13565;  -- Water Ring
         elseif (option == 4) then item = 1204;     -- Eye of Nept
-        elseif (option >= 5) then item = 1260;     -- Water Ore
+        elseif (option == 5) then item = 1260;     -- Water Ore
         end
 
         if (player:getFreeSlotsCount() == 0 and (option ~= 5 or option ~= 6)) then
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,item);
         else
-            if (option >= 5) then
+            if (option == 5) then
                 if (player:getCharVar("PrimeOre") > getConquestTally()) then
                     player:setCharVar("PrimeOre", getConquestTally())
                     player:addItem(item);
@@ -84,9 +84,9 @@ function onEventFinish(player,csid,option)
                     player:addGil(GIL_RATE*10000);
                     player:messageSpecial(ID.text.GIL_OBTAINED,GIL_RATE*10000); -- Gil
                 end
-            -- elseif (option == 6) then
-                -- player:addSpell(300); -- Avatar
-                -- player:messageSpecial(ID.text.AVATAR_UNLOCKED,0,0,2);
+            elseif (option == 6) then
+                player:addSpell(300); -- Avatar
+                player:messageSpecial(ID.text.AVATAR_UNLOCKED,0,0,2);
             else
                 player:addItem(item);
                 player:messageSpecial(ID.text.ITEM_OBTAINED,item); -- Item
