@@ -2808,9 +2808,9 @@ INSERT INTO `item_mods` VALUES (10921,1,8);
 INSERT INTO `item_mods` VALUES (10922,1,9);
 INSERT INTO `item_mods` VALUES (10924,511,4);     -- Chocobo Torque: Chocobo riding time +4
 INSERT INTO `item_mods` VALUES (10925,127,2);
-INSERT INTO `item_mods` VALUES (10926,513,1); -- FIELD TORQUE,Improves mining, logging, and harvesting results
-INSERT INTO `item_mods` VALUES (10926,514,1); -- LOGGING
-INSERT INTO `item_mods` VALUES (10926,515,1); -- HARVESTING
+INSERT INTO `item_mods` VALUES (10926,513,50); -- FIELD TORQUE,Improves mining, logging, and harvesting results
+INSERT INTO `item_mods` VALUES (10926,514,50); -- LOGGING
+INSERT INTO `item_mods` VALUES (10926,515,50); -- HARVESTING
 INSERT INTO `item_mods` VALUES (10927,28,5); -- GENESIS LOCKET, "Magic Atk. Bonus"+5 Increases magic critical hit damage
 INSERT INTO `item_mods` VALUES (10927,563,1); -- MCRTD
 INSERT INTO `item_mods` VALUES (10928,10,4);
@@ -5770,6 +5770,9 @@ INSERT INTO `item_mods` VALUES (11766,1,6);       -- Sanctuary Obi +1: DEF 6
 INSERT INTO `item_mods` VALUES (11766,12,6);      -- INT +6
 INSERT INTO `item_mods` VALUES (11766,27,-4);     -- Enmity -4
 INSERT INTO `item_mods` VALUES (11766,168,10);    -- Spell interruption rate down 10%
+INSERT INTO `item_mods` VALUES (11769,513,50); -- FIELD ROPE,Improves mining, logging, and harvesting results
+INSERT INTO `item_mods` VALUES (11769,514,50); -- LOGGING
+INSERT INTO `item_mods` VALUES (11769,515,50); -- HARVESTING
 INSERT INTO `item_mods` VALUES (11770,2,-10);
 INSERT INTO `item_mods` VALUES (11770,5,-10);
 INSERT INTO `item_mods` VALUES (11770,384,700);
@@ -12882,11 +12885,11 @@ INSERT INTO `item_mods` VALUES (14175,23,6);
 INSERT INTO `item_mods` VALUES (14175,25,4);
 INSERT INTO `item_mods` VALUES (14175,68,-4);
 INSERT INTO `item_mods` VALUES (14176,1,1);
-INSERT INTO `item_mods` VALUES (14176,513,73);
-INSERT INTO `item_mods` VALUES (14176,515,73);
+INSERT INTO `item_mods` VALUES (14176,513,30);
+INSERT INTO `item_mods` VALUES (14176,515,30);
 INSERT INTO `item_mods` VALUES (14177,1,3);
-INSERT INTO `item_mods` VALUES (14177,513,73);
-INSERT INTO `item_mods` VALUES (14177,515,73);
+INSERT INTO `item_mods` VALUES (14177,513,30);
+INSERT INTO `item_mods` VALUES (14177,515,30);
 INSERT INTO `item_mods` VALUES (14178,1,23);
 INSERT INTO `item_mods` VALUES (14178,23,5);
 INSERT INTO `item_mods` VALUES (14178,68,5);
@@ -13360,11 +13363,11 @@ INSERT INTO `item_mods` VALUES (14296,23,7);
 INSERT INTO `item_mods` VALUES (14296,25,7);
 INSERT INTO `item_mods` VALUES (14296,68,-7);
 INSERT INTO `item_mods` VALUES (14297,1,1);
-INSERT INTO `item_mods` VALUES (14297,513,73);
-INSERT INTO `item_mods` VALUES (14297,514,73);
+INSERT INTO `item_mods` VALUES (14297,513,30);
+INSERT INTO `item_mods` VALUES (14297,514,30);
 INSERT INTO `item_mods` VALUES (14298,1,8);
-INSERT INTO `item_mods` VALUES (14298,513,73);
-INSERT INTO `item_mods` VALUES (14298,514,73);
+INSERT INTO `item_mods` VALUES (14298,513,30);
+INSERT INTO `item_mods` VALUES (14298,514,30);
 INSERT INTO `item_mods` VALUES (14299,1,40);      -- Rasetsu Hakama: DEF 40
 INSERT INTO `item_mods` VALUES (14299,23,2);      -- Attack +2
 INSERT INTO `item_mods` VALUES (14299,499,2);     -- Ice spikes
@@ -13669,13 +13672,13 @@ INSERT INTO `item_mods` VALUES (14373,10,4);
 INSERT INTO `item_mods` VALUES (14373,25,5);
 INSERT INTO `item_mods` VALUES (14373,68,5);
 INSERT INTO `item_mods` VALUES (14374,1,2);
-INSERT INTO `item_mods` VALUES (14374,513,73);
-INSERT INTO `item_mods` VALUES (14374,514,73);
-INSERT INTO `item_mods` VALUES (14374,515,73);
+INSERT INTO `item_mods` VALUES (14374,513,40);
+INSERT INTO `item_mods` VALUES (14374,514,40);
+INSERT INTO `item_mods` VALUES (14374,515,40);
 INSERT INTO `item_mods` VALUES (14375,1,12);
-INSERT INTO `item_mods` VALUES (14375,513,73);
-INSERT INTO `item_mods` VALUES (14375,514,73);
-INSERT INTO `item_mods` VALUES (14375,515,73);
+INSERT INTO `item_mods` VALUES (14375,513,40);
+INSERT INTO `item_mods` VALUES (14375,514,40);
+INSERT INTO `item_mods` VALUES (14375,515,40);
 INSERT INTO `item_mods` VALUES (14376,1,50);      -- Rasetsu Samue: DEF 50
 INSERT INTO `item_mods` VALUES (14376,23,2);      -- Attack +2
 INSERT INTO `item_mods` VALUES (14376,499,5);     -- Shock spikes
@@ -14986,11 +14989,11 @@ INSERT INTO `item_mods` VALUES (14816,23,11);
 INSERT INTO `item_mods` VALUES (14816,25,5);
 INSERT INTO `item_mods` VALUES (14816,68,-5);
 INSERT INTO `item_mods` VALUES (14817,1,1);
-INSERT INTO `item_mods` VALUES (14817,514,73);
-INSERT INTO `item_mods` VALUES (14817,515,73);
+INSERT INTO `item_mods` VALUES (14817,514,30);
+INSERT INTO `item_mods` VALUES (14817,515,30);
 INSERT INTO `item_mods` VALUES (14818,1,3);
-INSERT INTO `item_mods` VALUES (14818,514,73);
-INSERT INTO `item_mods` VALUES (14818,515,73);
+INSERT INTO `item_mods` VALUES (14818,514,30);
+INSERT INTO `item_mods` VALUES (14818,515,30);
 INSERT INTO `item_mods` VALUES (14819,1,24);
 INSERT INTO `item_mods` VALUES (14819,23,2);
 INSERT INTO `item_mods` VALUES (14819,68,10);

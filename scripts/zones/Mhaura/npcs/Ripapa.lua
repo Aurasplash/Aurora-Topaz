@@ -82,7 +82,7 @@ function onEventFinish(player,csid,option)
             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,item);
         else
             if (option == 5) then
-                if (player:getCharVar("PrimeOre") > getConquestTally()) then
+                if (player:getCharVar("PrimeOre") < getConquestTally()) then
                     player:setCharVar("PrimeOre", getConquestTally())
                     player:addItem(item);
                     player:messageSpecial(ID.text.ITEM_OBTAINED,item);

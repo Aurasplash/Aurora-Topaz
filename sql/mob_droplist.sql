@@ -16538,8 +16538,8 @@ INSERT INTO `mob_droplist` VALUES (3138,0,0,1000,1875,1000); -- (Nergal, Bata, A
 INSERT INTO `mob_droplist` VALUES (3139,0,0,1000,1875,1000); -- (Apollyon Demon, Taurus, Ahriman) ancient_beastcoin x 1-2
 INSERT INTO `mob_droplist` VALUES (3139,0,0,1000,1875,500);  -- (Apollyon Demon, Taurus, Ahriman) ancient_beastcoin x 1-2
 
-INSERT INTO `mob_droplist` VALUES (5001,0,0,1000,1261,100); -- Aurora Carbuncle
-INSERT INTO `mob_droplist` VALUES (5002,0,0,1000,1262,100); -- Aurora Fenrir
+INSERT INTO `mob_droplist` VALUES (5001,0,0,1000,1261,200); -- Aurora Carbuncle
+INSERT INTO `mob_droplist` VALUES (5002,0,0,1000,1262,200); -- Aurora Fenrir
 INSERT INTO `mob_droplist` VALUES (5003,0,0,1000,1255,100); -- Aurora Ifrit
 INSERT INTO `mob_droplist` VALUES (5004,0,0,1000,1258,100); -- Aurora Titan
 INSERT INTO `mob_droplist` VALUES (5005,0,0,1000,1260,100); -- Aurora Leviathan
