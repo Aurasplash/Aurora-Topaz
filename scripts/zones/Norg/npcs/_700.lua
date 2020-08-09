@@ -36,7 +36,7 @@ function onTrigger(player, npc)
     elseif RhapsodiesMission == tpz.mission.id.rov.WHAT_LIES_BEYOND then
         player:startEvent(278)
     elseif player:getCharVar("ZeidIICipher") == 1 then
-        if npcUtil.giveItem(player, 10160) then -- Cipher: Zeid II
+        if npcUtil.giveItem(player, 8711) then -- Cipher: Zeid II Changed to Copper Voucher
             player:completeMission(ROV, tpz.mission.id.rov.VOLTO_OSCURO)
             player:addMission(ROV, tpz.mission.id.rov.RING_MY_BELL)
             player:setCharVar("ZeidIICipher", 0)

@@ -4782,7 +4782,7 @@ namespace charutils
             }
         }
 
-        bonus += (int32)(exp * ((PChar->getMod(Mod::EXP_BONUS) + rovBonus) / 100.0f));
+        bonus += (int32)(exp * ((PChar->getMod(Mod::EXP_BONUS)) / 100.0f));
 
         if (bonus + (int32)exp < 0)
         {

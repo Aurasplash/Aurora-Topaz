@@ -352,8 +352,7 @@ dynamis.entryNpcOnEventFinish = function(player, csid, option)
             local dynaWaitxDay = player:getCharVar("dynaWaitxDay")
 
             if
-                (dynaWaitxDay + BETWEEN_2DYNA_WAIT_TIME * 60 * 60) < realDay and
-                not player:hasKeyItem(tpz.ki.RHAPSODY_IN_AZURE)
+                (dynaWaitxDay + BETWEEN_2DYNA_WAIT_TIME * 60 * 60) < realDay 
             then
                 player:setCharVar("dynaWaitxDay", realDay)
             end

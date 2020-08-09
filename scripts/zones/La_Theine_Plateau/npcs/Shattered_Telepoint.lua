@@ -55,7 +55,7 @@ function onEventFinish(player, csid, option)
         player:completeMission(ROV, tpz.mission.id.rov.THE_PATH_UNTRAVELED)
         player:addMission(ROV, tpz.mission.id.rov.AT_THE_HEAVENS_DOOR)
     elseif csid == 15 then
-        if npcUtil.giveItem(player, 10159) then -- Cipher: Lion II
+        if npcUtil.giveItem(player, 8711) then -- Cipher: Lion II Changed to Copper Voucher
             npcUtil.giveKeyItem(player, tpz.ki.RHAPSODY_IN_UMBER)
             player:completeMission(ROV, tpz.mission.id.rov.A_LAND_AFTER_TIME)
             player:addMission(ROV, tpz.mission.id.rov.FATES_CALL)

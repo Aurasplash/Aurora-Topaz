@@ -1009,9 +1009,9 @@ tpz.regime.bookOnTrigger = function(player, regimeType)
                 arg2 = arg2 + 2^i
             end
         end
-        if player:hasKeyItem(tpz.ki.RHAPSODY_IN_WHITE) then
-            arg4 = 1
-        end
+        -- if player:hasKeyItem(tpz.ki.RHAPSODY_IN_WHITE) then
+        --     arg4 = 1
+        -- end
 
         player:startEvent(info.event, 0, arg2, 0, arg4, 0, 0, player:getCurrency("valor_point"), player:getCharVar("[regime]id"))
     else

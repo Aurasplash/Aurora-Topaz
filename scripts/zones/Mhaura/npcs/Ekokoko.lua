@@ -46,7 +46,8 @@ function onEventFinish(player, csid, option)
     if csid == 370 then
         player:confirmTrade()
         if player:hasJob(0) == 0 then -- Is Subjob Unlocked
-            npcUtil.giveKeyItem(player, tpz.ki.GILGAMESHS_INTRODUCTORY_LETTER)
+            -- npcUtil.giveKeyItem(player, tpz.ki.GILGAMESHS_INTRODUCTORY_LETTER)
+            if not npcUtil.giveItem(player, 8711) then return end
         else
             if not npcUtil.giveItem(player, 8711) then return end
         end
