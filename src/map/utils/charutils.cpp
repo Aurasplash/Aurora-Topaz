@@ -3710,7 +3710,7 @@ namespace charutils
                     // pet or companion exp penalty needs to be added here
                     if (PMob->PMaster != nullptr)
                     {
-                        exp = exp / 2;
+                        exp = exp / 3;
                     }
 
                     if (distance(PMember->loc.p, PMob->loc.p) > 100)
