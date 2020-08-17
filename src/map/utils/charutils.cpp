@@ -3710,7 +3710,16 @@ namespace charutils
                     // pet or companion exp penalty needs to be added here
                     if (PMob->PMaster != nullptr)
                     {
-                        exp = exp / 3;
+                        switch (pcinzone)
+                        {
+                        case 1: exp *= 0.75f; break;
+                        case 2: exp *= 0.50f; break;
+                        case 3: exp *= 0.25f; break;
+                        case 4: exp *= 0.25f; break;
+                        case 5: exp *= 0.25f; break;
+                        case 6: exp *= 0.25f; break;
+                        default: exp *= 0.25f; break;
+                        }
                     }
 
                     if (distance(PMember->loc.p, PMob->loc.p) > 100)
