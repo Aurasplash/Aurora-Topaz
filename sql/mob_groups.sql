@@ -12624,7 +12624,7 @@ INSERT INTO `mob_groups` VALUES (17,4390,212,'Wyvernpoacher_Drachlox',0,32,2680,
 INSERT INTO `mob_groups` VALUES (18,1085,212,'Doom_Soldier',960,0,686,0,0,65,67,0);
 INSERT INTO `mob_groups` VALUES (19,1083,212,'Doom_Mage',960,0,680,0,0,65,67,0);
 -- INSERT INTO `mob_groups` VALUES (20,4580,212,'Boulder_Eater',330,0,2816,0,0,100,105,0);
-INSERT INTO `mob_groups` VALUES (18,6414,160,'Cave_Worm',960,0,438,0,0,77,79,0);
+INSERT INTO `mob_groups` VALUES (20,6414,212,'Cave_Worm',960,0,438,0,0,77,79,0);
 -- INSERT INTO `mob_groups` VALUES (21,4579,212,'Pygmytoise',330,0,2815,0,0,100,103,0);
 INSERT INTO `mob_groups` VALUES (21,4065,212,'Typhoon_Wyvern',960,0,42,0,0,78,80,0);
 INSERT INTO `mob_groups` VALUES (22,1160,212,'Earth_Elemental',960,4,733,0,0,75,77,0);
