@@ -3929,7 +3929,7 @@ INSERT INTO `item_basic` VALUES (4179,0,'new_years_gift','new_years_gift',1,6305
 INSERT INTO `item_basic` VALUES (4180,0,'new_years_gift','new_years_gift',1,63056,0,1,0);
 INSERT INTO `item_basic` VALUES (4181,0,'scroll_of_instant_warp','instant_warp',1,63068,0,1,0);
 INSERT INTO `item_basic` VALUES (4182,0,'scroll_of_instant_reraise','instant_reraise',1,63060,0,1,0);
-INSERT INTO `item_basic` VALUES (4183,0,'konron_hassen','konron_hassen',99,1548,63,0,12);
+INSERT INTO `item_basic` VALUES (4183,0,'konron_hassen','konron_hassen',99,1548,63,0,0);
 INSERT INTO `item_basic` VALUES (4184,0,'kongou_inaho','kongou_inaho',99,1548,63,0,6);
 INSERT INTO `item_basic` VALUES (4185,0,'meifu_goma','meifu_goma',99,1548,63,0,3);
 INSERT INTO `item_basic` VALUES (4186,0,'airborne','airborne',99,1548,63,0,78);
@@ -5396,7 +5396,7 @@ INSERT INTO `item_basic` VALUES (5720,0,'dish_of_spaghetti_marinara_+1','marinar
 INSERT INTO `item_basic` VALUES (5721,0,'plate_of_crab_sushi','crab_sushi',12,1548,53,0,93);
 INSERT INTO `item_basic` VALUES (5722,0,'plate_of_crab_sushi_+1','crab_sushi_+1',12,1548,53,0,165);
 INSERT INTO `item_basic` VALUES (5724,0,'pinch_of_pungent_powder','pungent_powder',99,1548,33,0,20);
-INSERT INTO `item_basic` VALUES (5725,0,'goshikitenge','goshikitenge',99,1548,63,0,2);
+INSERT INTO `item_basic` VALUES (5725,0,'goshikitenge','goshikitenge',99,1548,63,0,0);
 INSERT INTO `item_basic` VALUES (5726,0,'zucchini','zucchini',12,1548,59,0,126);
 INSERT INTO `item_basic` VALUES (5727,0,'serving_of_zaru_soba','zaru_soba',12,1548,56,0,473);
 INSERT INTO `item_basic` VALUES (5728,0,'serving_of_zaru_soba_+1','zaru_soba_+1',12,1548,56,0,591);
@@ -5440,7 +5440,7 @@ INSERT INTO `item_basic` VALUES (5765,0,'red_curry_bun_+1','r._curry_bun_+1',12,
 INSERT INTO `item_basic` VALUES (5766,0,'butter_crepe','butter_crepe',12,1548,57,0,10);
 INSERT INTO `item_basic` VALUES (5767,0,'crepe_delice','crepe_delice',12,1548,57,0,15);
 INSERT INTO `item_basic` VALUES (5768,0,'pair_of_magian_spectacles','magian_specs.',1,62528,0,1,0);
-INSERT INTO `item_basic` VALUES (5769,0,'popper','popper',99,1548,63,0,2);
+INSERT INTO `item_basic` VALUES (5769,0,'popper','popper',99,1548,63,0,0);
 INSERT INTO `item_basic` VALUES (5770,0,'super_reraiser','super_reraiser',1,38412,33,1,0);
 INSERT INTO `item_basic` VALUES (5771,0,'ham_and_cheese_crepe','ham_&_ch._crepe',12,1548,56,0,33);
 INSERT INTO `item_basic` VALUES (5772,0,'crepe_paysanne','crepe_paysanne',12,1548,56,0,40);
@@ -5553,7 +5553,7 @@ INSERT INTO `item_basic` VALUES (5879,0,'phial_of_doom_screen','doom_screen',1,6
 INSERT INTO `item_basic` VALUES (5880,0,'phial_of_poison_screen','poison_screen',1,63040,0,1,0);
 INSERT INTO `item_basic` VALUES (5881,0,'shisai_kaboku','shisai_kaboku',99,1548,63,0,25);
 INSERT INTO `item_basic` VALUES (5882,0,'marine_bliss','marine_bliss',99,1548,63,0,25);
-INSERT INTO `item_basic` VALUES (5883,0,'falling_star','falling_star',99,1548,63,0,25);
+INSERT INTO `item_basic` VALUES (5883,0,'falling_star','falling_star',99,1548,63,0,0);
 INSERT INTO `item_basic` VALUES (5884,0,'rengedama','rengedama',99,1548,63,0,25);
 INSERT INTO `item_basic` VALUES (5885,0,'saltena','saltena',12,1548,56,0,100);
 INSERT INTO `item_basic` VALUES (5886,0,'elshena','elshena',12,1548,56,0,105);
