@@ -5902,13 +5902,13 @@ void SmallPacket0x106(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
         // Validate this player can afford said item
         if (PCharGil->getQuantity() < PriceWithTax)
-            {
-                        // Exploit attempt
-                ShowError(CL_RED"Bazaar purchase exploit attempt by: %s\n" CL_RESET, PChar->GetName());
+        {
+            // Exploit attempt
+            ShowError(CL_RED"Bazaar purchase exploit attempt by: %s\n" CL_RESET, PChar->GetName());
             PChar->pushPacket(new CBazaarPurchasePacket(PTarget, false));
             return;
-            }
-        
+        }
+
         charutils::UpdateItem(PChar, LOC_INVENTORY, 0, -(int32)PriceWithTax);
         charutils::UpdateItem(PTarget, LOC_INVENTORY, 0, Price);
 
