@@ -46,6 +46,10 @@ zones[tpz.zone.TEMPLE_OF_UGGALEPIH] =
     },
     mob =
     {
+        SOZU_ROGBERRY_PH         =
+        {
+            [17428747] = 17428751, -- aurora loto from forced spawn
+        },
         SOZU_SARBERRY_PH         =
         {
             [17428551] = 17428554, -- 89 0.499 -23

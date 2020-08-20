@@ -12695,7 +12695,7 @@ INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,1119,340);
 INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,1138,70);
 INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,1145,40);
 INSERT INTO `mob_droplist` VALUES (2444,2,0,1000,1431,0);
-INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,2387,30);
+-- INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,2387,30); -- sozu rogberry changed to loto pop
 INSERT INTO `mob_droplist` VALUES (2444,0,0,1000,4158,140);
 INSERT INTO `mob_droplist` VALUES (2445,0,0,1000,748,40);
 INSERT INTO `mob_droplist` VALUES (2445,0,0,1000,1119,190);
@@ -12737,7 +12737,7 @@ INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,1119,310);
 INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,1145,20);
 INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,1162,10);
 INSERT INTO `mob_droplist` VALUES (2450,2,0,1000,1431,0);
-INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,2387,10);
+-- INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,2387,10); -- sozu rogbrry changed to lotto spawn
 INSERT INTO `mob_droplist` VALUES (2450,0,0,1000,4158,80);
 INSERT INTO `mob_droplist` VALUES (2451,2,0,1000,749,0);
 INSERT INTO `mob_droplist` VALUES (2451,0,0,1000,1114,60);
