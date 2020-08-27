@@ -167,6 +167,8 @@ tpz.shop =
                 9193,    2500,      tpz.craftRank.AMATEUR,      -- Miso
                 9194,    2500,      tpz.craftRank.AMATEUR,      -- Soy Sauce
                 9195,    2500,      tpz.craftRank.AMATEUR,      -- Dried Bonito
+                4380,     228,      tpz.craftRank.AMATEUR,      -- Smoked Salmon
+                 625,      91,      tpz.craftRank.AMATEUR,      -- Apple Vinegar
                  610,      60,      tpz.craftRank.RECRUIT,      -- San d'Orian Flour
                  627,      40,      tpz.craftRank.RECRUIT,      -- Maple Sugar
                 4363,      44,      tpz.craftRank.RECRUIT,      -- Faerie Apple
