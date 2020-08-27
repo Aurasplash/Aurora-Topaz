@@ -7308,23 +7308,23 @@ INSERT INTO `mob_droplist` VALUES (1410,0,0,1000,4272,30);
 INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,497,210);
 INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,499,30);
 INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,1426,90);
-INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,2385,20);
-INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,2386,80);
+-- INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,2385,20); -- Moldy Buckler
+-- INSERT INTO `mob_droplist` VALUES (1411,0,0,1000,2386,80); -- Hoary Battle Horn
 INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,497,210);
 INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,499,20);
 INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,1427,100);
-INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,2385,20);
-INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,2386,80);
+-- INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,2385,20); -- Moldy Buckler
+-- INSERT INTO `mob_droplist` VALUES (1412,0,0,1000,2386,80); -- Hoary Battle Horn
 INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,497,450);
 INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,1436,180);
-INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,2385,20);
-INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,2386,50);
+-- INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,2385,20); -- Moldy Buckler
+-- INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,2386,50); -- Hoary Battle Horn
 INSERT INTO `mob_droplist` VALUES (1413,0,0,1000,5010,20);
 INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,497,520);
 INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,499,30);
 INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,1434,190);
-INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,2385,20);
-INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,2386,70);
+-- INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,2385,20); -- Moldy Buckler
+-- INSERT INTO `mob_droplist` VALUES (1414,0,0,1000,2386,70); -- Hoary Battle Horn
 INSERT INTO `mob_droplist` VALUES (1415,0,0,1000,886,50);   -- (Judicator_Demon) demon_skull
 INSERT INTO `mob_droplist` VALUES (1415,0,0,1000,902,121);  -- demon_horn
 INSERT INTO `mob_droplist` VALUES (1415,0,0,1000,4875,50);  -- scroll_of_absorb-dex
@@ -7990,7 +7990,7 @@ INSERT INTO `mob_droplist` VALUES (1535,0,0,1000,18450,154); -- (Loo Kutto the P
 INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,4484,1000);
 INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,4484,500);
 INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,4484,330);
-INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,17440,80); -- Kraken Club
+INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,17440,40); -- Kraken Club
 INSERT INTO `mob_droplist` VALUES (1537,0,0,1000,3193,470);
 INSERT INTO `mob_droplist` VALUES (1537,0,0,1000,3193,230);
 INSERT INTO `mob_droplist` VALUES (1537,0,0,1000,3193,160);
@@ -11970,7 +11970,7 @@ INSERT INTO `mob_droplist` VALUES (2297,0,0,1000,4809,60);
 INSERT INTO `mob_droplist` VALUES (2298,2,0,1000,748,0);
 INSERT INTO `mob_droplist` VALUES (2298,0,0,1000,1119,1000);
 INSERT INTO `mob_droplist` VALUES (2298,0,0,1000,1162,10);
-INSERT INTO `mob_droplist` VALUES (2298,0,0,1000,16480,1000);
+INSERT INTO `mob_droplist` VALUES (2298,0,0,1000,16480,50);
 INSERT INTO `mob_droplist` VALUES (2299,2,0,1000,748,0);
 INSERT INTO `mob_droplist` VALUES (2299,0,0,1000,1119,1000);
 INSERT INTO `mob_droplist` VALUES (2299,0,0,1000,1145,10);
@@ -15311,7 +15311,7 @@ INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,644,250);
 INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,955,70);
 INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,955,70);
 INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,1132,20);
-INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,2388,20);
+-- INSERT INTO `mob_droplist` VALUES (2824,0,0,1000,2388,20); -- Diorite
 INSERT INTO `mob_droplist` VALUES (2825,0,0,1000,1101,1000);
 INSERT INTO `mob_droplist` VALUES (2826,0,0,1000,1435,160);
 INSERT INTO `mob_droplist` VALUES (2826,0,0,1000,4981,60);
