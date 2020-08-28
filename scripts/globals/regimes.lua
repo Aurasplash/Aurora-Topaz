@@ -59,7 +59,7 @@ local regimeInfo = {
         {
             [  3] = {act = "CANCEL_REGIME",   cost =  0, discounted =  0},
             [ 21] = {act = "REPATRIATION",    cost = 50, discounted = 10},
-            [ 37] = {act = "RERAISE",         cost = 10, discounted =  5},
+            [ 37] = {act = "RERAISE",         cost = 150, discounted =  75},
             [ 53] = {act = "REGEN",           cost = 20, discounted = 10},
             [ 69] = {act = "REFRESH",         cost = 20, discounted = 10},
             [ 85] = {act = "PROTECT",         cost = 15, discounted =  5},
@@ -473,8 +473,8 @@ local regimeInfo = {
             [ 20] = {act = "REPATRIATION",    cost = 50, discounted = 10},
             [ 36] = {act = "CIRCUMSPECTION",  cost =  5, discounted =  5},
             [ 52] = {act = "HOMING_INSTINCT", cost = 50, discounted = 25},
-            [ 68] = {act = "RERAISE",         cost = 10, discounted =  5},
-            [ 84] = {act = "RERAISE_II",      cost = 20, discounted = 10},
+            [ 68] = {act = "RERAISE",         cost = 150, discounted =  75},
+            [ 84] = {act = "RERAISE_II",      cost = 200, discounted = 100},
             [100] = {act = "RERAISE_III",     cost = 30, discounted = 15},
             [116] = {act = "REGEN",           cost = 20, discounted = 10},
             [132] = {act = "REFRESH",         cost = 20, discounted = 10},
@@ -1117,11 +1117,85 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
             player:addStatusEffectEx(tpz.effect.TELEPORT, 0, tpz.teleport.id.WARP, 0, 1)
 
         elseif act == "RERAISE" then
+            local mLvl = player:getMainLvl()
+            local protectpower = 0
+            local shellpower
+
+            if mLvl < 27 then
+                protectpower = 15
+                shellpower = 9
+            elseif mLvl < 37 then
+                protectpower = 40
+                shellpower = 9
+            elseif mLvl < 47 then
+                protectpower = 40
+                shellpower = 14
+            elseif mLvl < 57 then
+                protectpower = 75
+                shellpower = 14
+            elseif mLvl < 63 then
+                protectpower = 75
+                shellpower = 19
+            elseif mLvl < 68 then
+                protectpower = 120
+                shellpower = 19
+            else
+                protectpower = 120
+                shellpower = 22
+            end
+
             player:delStatusEffectSilent(tpz.effect.RERAISE)
+            player:delStatusEffectSilent(tpz.effect.REGEN)
+            player:delStatusEffectSilent(tpz.effect.REFRESH)
+            player:delStatusEffect(tpz.effect.SUBLIMATION_COMPLETE)
+            player:delStatusEffect(tpz.effect.SUBLIMATION_ACTIVATED)
+            player:delStatusEffectSilent(tpz.effect.PROTECT)
+            player:delStatusEffectSilent(tpz.effect.SHELL)
+            player:addStatusEffect(tpz.effect.SHELL, shellpower, 0, 1800)
+            player:addStatusEffect(tpz.effect.PROTECT, protectpower, 0, 1800)
+            player:addStatusEffect(tpz.effect.REFRESH, 1, 3, 3600, 0, 3)
+            player:addStatusEffect(tpz.effect.REGEN, 1, 3, 3600)
             player:addStatusEffect(tpz.effect.RERAISE, 1, 0, 7200)
 
         elseif act == "RERAISE_II" then
+            local mLvl = player:getMainLvl()
+            local protectpower = 0
+            local shellpower
+
+            if mLvl < 27 then
+                protectpower = 15
+                shellpower = 9
+            elseif mLvl < 37 then
+                protectpower = 40
+                shellpower = 9
+            elseif mLvl < 47 then
+                protectpower = 40
+                shellpower = 14
+            elseif mLvl < 57 then
+                protectpower = 75
+                shellpower = 14
+            elseif mLvl < 63 then
+                protectpower = 75
+                shellpower = 19
+            elseif mLvl < 68 then
+                protectpower = 120
+                shellpower = 19
+            else
+                protectpower = 120
+                shellpower = 22
+            end
+
             player:delStatusEffectSilent(tpz.effect.RERAISE)
+            player:delStatusEffectSilent(tpz.effect.REGEN)
+            player:delStatusEffectSilent(tpz.effect.REFRESH)
+            player:delStatusEffect(tpz.effect.SUBLIMATION_COMPLETE)
+            player:delStatusEffect(tpz.effect.SUBLIMATION_ACTIVATED)
+            player:delStatusEffectSilent(tpz.effect.PROTECT)
+            player:delStatusEffectSilent(tpz.effect.SHELL)
+            player:addStatusEffect(tpz.effect.SHELL, shellpower, 0, 1800)
+            player:addStatusEffect(tpz.effect.PROTECT, protectpower, 0, 1800)
+            player:addStatusEffect(tpz.effect.REFRESH, 1, 3, 3600, 0, 3)
+            player:addStatusEffect(tpz.effect.REGEN, 1, 3, 3600)
             player:addStatusEffect(tpz.effect.RERAISE, 2, 0, 7200)
 
         elseif act == "RERAISE_III" then
