@@ -1047,6 +1047,8 @@ namespace battleutils
                     int8 Samba = tpzrand::GetRandomNumber(1, (delay * multiplier) / 100 + 1);
 
                     // vary damage based on lvl diff
+                    // Remove lvldiff for Aurora
+                    /*
                     int8 lvlDiff = (PDefender->GetMLevel() - PAttacker->GetMLevel()) / 2;
 
                     if (lvlDiff < -5) {
@@ -1054,6 +1056,7 @@ namespace battleutils
                     }
 
                     Samba -= lvlDiff;
+                    */
 
                     if (Samba > (finaldamage / 2)) {
                         Samba = finaldamage / 2;
