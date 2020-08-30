@@ -83,7 +83,7 @@ HARVESTING_RATE         = 80 -- % chance to recieve an item from haresting.  Set
 EXCAVATION_RATE         = 80 -- % chance to recieve an item from excavation.  Set between 0 and 100.
 LOGGING_RATE            = 80 -- % chance to recieve an item from logging.  Set between 0 and 100.
 MINING_RATE             = 80 -- % chance to recieve an item from mining.  Set between 0 and 100.
-DIGGING_RATE            = 90 -- % chance to receive an item from chocbo digging during favorable weather.  Set between 0 and 100.
+DIGGING_RATE            = 80 -- % chance to receive an item from chocbo digging during favorable weather.  Set between 0 and 100.
 
 HEALING_TP_CHANGE       = -100 -- Change in TP for each healing tick. Default is -100
 

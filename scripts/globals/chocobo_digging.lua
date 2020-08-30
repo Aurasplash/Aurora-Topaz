@@ -808,7 +808,10 @@ local function updatePlayerDigCount(player, increment)
         player:setCharVar('[DIG]DigCount', player:getCharVar('[DIG]DigCount') + increment)
     end
 
-    player:setLocalVar('[DIG]LastDigTime', os.time())
+    player:setCharVar('[DIG]POS_X', player:getXPos())
+    player:setCharVar('[DIG]POS_Y', player:getYPos())
+    player:setCharVar('[DIG]POS_Z', player:getZPos())
+    player:setCharVar('[DIG]LastDigTime', os.time())
 end
 
 
@@ -821,21 +824,28 @@ local function updateZoneDigCount(zoneId, increment)
     else
         SetServerVariable(serverVar, GetServerVariable(serverVar) + increment)
     end
+
+    SetServerVariable('[DIG]ZONE'..zoneId..'_TIME', os.time())
 end
 
 local function canDig(player)
     local digCount = player:getCharVar('[DIG]DigCount')
-    local lastDigTime = player:getLocalVar('[DIG]LastDigTime')
+    local lastDigTime = player:getCharVar('[DIG]LastDigTime')
     local zoneItemsDug = GetServerVariable('[DIG]ZONE'..player:getZoneID()..'_ITEMS')
     local zoneInTime = player:getLocalVar('ZoneInTime')
     local currentTime = os.time()
     local skillRank = player:getSkillRank(tpz.skill.DIG)
+    local lastZoneDigTime = GetServerVariable('[DIG]ZONE'..player:getZoneID()..'_TIME')
+    local lastDigX = player:getCharVar('[DIG]POS_X')
+    local lastDigY = player:getCharVar('[DIG]POS_Y')
+    local lastDigZ = player:getCharVar('[DIG]POS_Z')
 
     -- base delay -5 for each rank
-    local digDelay = 16 - (skillRank * 5)
+    local digDelay = 20 - skillRank
     local areaDigDelay = 60 - (skillRank * 5)
 
     local prevMidnight = getMidnight() - 86400
+    local prevHour = os.time() - 3600
 
     -- Last dig was before today, so reset player fatigue
     if lastDigTime < prevMidnight then
@@ -843,12 +853,19 @@ local function canDig(player)
         digCount = 0
     end
 
-    -- neither player nor zone have reached their dig limit
+    -- Last dig was before a game day, so reset zone fatigue
+    if lastZoneDigTime < prevHour then
+        updateZoneDigCount(player:getZoneID(), 0)
+        zoneItemsDug = 0
+    end
 
-    if (digCount < 100 and zoneItemsDug < 20) or DIG_FATIGUE == 0 then
-        -- pesky delays
-        if (zoneInTime + areaDigDelay) <= currentTime and (lastDigTime + digDelay) <= currentTime then
-            return true
+    -- neither player nor zone have reached their dig limit
+    if (player:getXPos() >= (lastDigX + (10 + skillRank * 3) or player:getXPos() <= (lastDigX - (10 + skillRank * 3)) or player:getYPos() >= (lastDigY + (10 + skillRank * 3)) or player:getYPos() <= (lastDigY - (10 + skillRank * 3)) or player:getZPos() >= (lastDigZ + (10 + skillRank * 3)) or player:getZPos() <= (lastDigZ - (10 + skillRank * 3))) then
+        if ((digCount < 100 and zoneItemsDug < 20) or DIG_FATIGUE == 0) then
+            -- pesky delays
+            if (zoneInTime + areaDigDelay) <= currentTime and (lastDigTime + digDelay) <= currentTime then
+                return true
+            end
         end
     end
 
@@ -868,7 +885,7 @@ local function calculateSkillUp(player)
     -- make sure our skill isn't capped
     if realSkill < maxSkill then
         -- can we skill up?
-        if roll <= 15 then
+        if roll <= 5 then
             if (increment + realSkill) > maxSkill then
                 increment = maxSkill - realSkill
             end
@@ -964,7 +981,7 @@ tpz.chocoboDig.start = function(player, precheck)
         end
 
         -- dig chance failure
-        if roll > DIGGING_RATE then
+        if roll > (DIGGING_RATE + player:getSkillRank(tpz.skill.DIG)) then
             player:messageText(player, text.FIND_NOTHING)
 
         -- dig chance success
@@ -986,7 +1003,7 @@ tpz.chocoboDig.start = function(player, precheck)
             end
 
             updatePlayerDigCount(player, 1)
-            -- updateZoneDigCount(zoneId, 1) -- TODO: implement mechanic for resetting zone dig count. until then, leave this commented out
+            updateZoneDigCount(zoneId, 1) -- TODO: implement mechanic for resetting zone dig count. until then, leave this commented out
             -- TODO: learn abilities from chocobo raising
         end
 
