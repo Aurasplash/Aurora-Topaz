@@ -1,4 +1,4 @@
-﻿/*
+﻿//*
 ===========================================================================
 
   Copyright (c) 2010-2015 Darkstar Dev Teams
@@ -1043,8 +1043,7 @@ namespace battleutils
 
                 if (daze == EFFECT_DRAIN_DAZE)
                 {
-                    uint16 multiplier = (uint16)(3 + 5.5f * (power - 1));
-                    int8 Samba = tpzrand::GetRandomNumber(1, (delay * multiplier) / 100 + 1);
+                    int8 Samba = tpzrand::GetRandomNumber(1, (delay * power) / 100 + 1);
 
                     // vary damage based on lvl diff
                     // Remove lvldiff for Aurora
