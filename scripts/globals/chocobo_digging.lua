@@ -860,7 +860,7 @@ local function canDig(player)
     end
 
     -- neither player nor zone have reached their dig limit
-    if (player:getXPos() >= (lastDigX + (10 + skillRank * 3) or player:getXPos() <= (lastDigX - (10 + skillRank * 3)) or player:getYPos() >= (lastDigY + (10 + skillRank * 3)) or player:getYPos() <= (lastDigY - (10 + skillRank * 3)) or player:getZPos() >= (lastDigZ + (10 + skillRank * 3)) or player:getZPos() <= (lastDigZ - (10 + skillRank * 3))) then
+    if (player:getXPos() >= (lastDigX + (10 + skillRank * 3)) or player:getXPos() <= (lastDigX - (10 + skillRank * 3)) or player:getYPos() >= (lastDigY + (10 + skillRank * 3)) or player:getYPos() <= (lastDigY - (10 + skillRank * 3)) or player:getZPos() >= (lastDigZ + (10 + skillRank * 3)) or player:getZPos() <= (lastDigZ - (10 + skillRank * 3))) then
         if ((digCount < 100 and zoneItemsDug < 20) or DIG_FATIGUE == 0) then
             -- pesky delays
             if (zoneInTime + areaDigDelay) <= currentTime and (lastDigTime + digDelay) <= currentTime then
