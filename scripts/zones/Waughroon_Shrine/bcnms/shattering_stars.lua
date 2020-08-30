@@ -42,6 +42,7 @@ function onEventFinish(player, csid, option)
         player:setCharVar("maatDefeated", pjob)
         if bit.band(maatsCap, bit.lshift(1, pjob - 1)) ~= 1 then
             player:setCharVar("maatsCap", bit.bor(maatsCap, bit.lshift(1, pjob - 1)))
+            player:setCharVar("genkaiJobs", bit.bor(maatsCap, bit.lshift(1, pjob - 1)))
         end
         player:addTitle(tpz.title.MAAT_MASHER)
     end
