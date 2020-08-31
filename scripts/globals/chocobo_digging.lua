@@ -841,7 +841,7 @@ local function canDig(player)
     local lastDigZ = player:getCharVar('[DIG]POS_Z')
 
     -- base delay -5 for each rank
-    local digDelay = 20 - skillRank
+    local digDelay = 16 - (skillRank * 5)
     local areaDigDelay = 60 - (skillRank * 5)
 
     local prevMidnight = getMidnight() - 86400
@@ -860,7 +860,7 @@ local function canDig(player)
     end
 
     -- neither player nor zone have reached their dig limit
-    if (player:getXPos() >= (lastDigX + (10 + skillRank * 3)) or player:getXPos() <= (lastDigX - (10 + skillRank * 3)) or player:getYPos() >= (lastDigY + (10 + skillRank * 3)) or player:getYPos() <= (lastDigY - (10 + skillRank * 3)) or player:getZPos() >= (lastDigZ + (10 + skillRank * 3)) or player:getZPos() <= (lastDigZ - (10 + skillRank * 3))) then
+    if (player:getXPos() >= (lastDigX + (40 - skillRank * 3)) or player:getXPos() <= (lastDigX - (40 - skillRank * 3)) or player:getYPos() >= (lastDigY + (40 - skillRank * 3)) or player:getYPos() <= (lastDigY - (40 - skillRank * 3)) or player:getZPos() >= (lastDigZ + (40 - skillRank * 3)) or player:getZPos() <= (lastDigZ - (40 - skillRank * 3))) then
         if ((digCount < 100 and zoneItemsDug < 20) or DIG_FATIGUE == 0) then
             -- pesky delays
             if (zoneInTime + areaDigDelay) <= currentTime and (lastDigTime + digDelay) <= currentTime then
