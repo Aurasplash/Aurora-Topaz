@@ -19,7 +19,7 @@ end
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = tpz.effect.POISON
     local duration = 60
-    local power = mob:getMainLvl() / 3
+    local power = mob:getMainLvl() / 5 + 10
 
     if (math.random() <= 0.5) then
         -- stun
