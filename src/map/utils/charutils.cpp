@@ -3376,6 +3376,120 @@ namespace charutils
                         }
                     }
 
+                    if (mobCheck > EMobDifficulty::VeryTough)
+                    {
+                        if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && region >= 0 && region <= 22)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.95f; break;
+                            case 3: exp *= 0.80f; break;
+                            case 4: exp *= 0.70f; break;
+                            case 5: exp *= 0.65f; break;
+                            case 6: exp *= 0.60f; break;
+                            default: exp *= (3.0f / pcinzone); break;
+                            }
+                        }
+                        else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && region >= 28 && region <= 32)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.95f; break;
+                            case 3: exp *= 0.80f; break;
+                            case 4: exp *= 0.70f; break;
+                            case 5: exp *= 0.65f; break;
+                            case 6: exp *= 0.60f; break;
+                            default: exp *= (3.0f / pcinzone); break;
+                            }
+
+                        }
+                        else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && region >= 33 && region <= 40)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.95f; break;
+                            case 3: exp *= 0.80f; break;
+                            case 4: exp *= 0.70f; break;
+                            case 5: exp *= 0.65f; break;
+                            case 6: exp *= 0.60f; break;
+                            default: exp *= (3.0f / pcinzone); break;
+                            }
+
+                        }
+                        else
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.80f; break;
+                            case 3: exp *= 0.70f; break;
+                            case 4: exp *= 0.65f; break;
+                            case 5: exp *= 0.625f; break;
+                            case 6: exp *= 0.60f; break;
+                            default: exp *= (3.0f / pcinzone); break;
+                            }
+                        }
+                    }
+                    else if(mobCheck > EMobDifficulty::Tough)
+                    {
+                        if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && region >= 0 && region <= 22)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.925f; break;
+                            case 3: exp *= 0.75f; break;
+                            case 4: exp *= 0.65f; break;
+                            case 5: exp *= 0.60f; break;
+                            case 6: exp *= 0.55f; break;
+                            default: exp *= (2.75f / pcinzone); break;
+                            }
+                        }
+                        else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && region >= 28 && region <= 32)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.925f; break;
+                            case 3: exp *= 0.75f; break;
+                            case 4: exp *= 0.65f; break;
+                            case 5: exp *= 0.60f; break;
+                            case 6: exp *= 0.55f; break;
+                            default: exp *= (2.75f / pcinzone); break;
+                            }
+
+                        }
+                        else if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && region >= 33 && region <= 40)
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.925f; break;
+                            case 3: exp *= 0.75f; break;
+                            case 4: exp *= 0.65f; break;
+                            case 5: exp *= 0.60f; break;
+                            case 6: exp *= 0.55f; break;
+                            default: exp *= (2.75f / pcinzone); break;
+                            }
+
+                        }
+                        else
+                        {
+                            switch (pcinzone)
+                            {
+                            case 1: exp *= 1.00f; break;
+                            case 2: exp *= 0.75f; break;
+                            case 3: exp *= 0.65f; break;
+                            case 4: exp *= 0.60f; break;
+                            case 5: exp *= 0.575f; break;
+                            case 6: exp *= 0.55f; break;
+                            default: exp *= (2.75f / pcinzone); break;
+                            }
+                        }
+                    }
                     if (mobCheck > EMobDifficulty::DecentChallenge)
                     {
                         if (PMember->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && region >= 0 && region <= 22)
