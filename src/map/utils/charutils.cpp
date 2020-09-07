@@ -3826,9 +3826,9 @@ namespace charutils
                     {
                         switch (pcinzone)
                         {
-                        case 1: exp *= 0.75f; break;
-                        case 2: exp *= 0.50f; break;
-                        case 3: exp *= 0.25f; break;
+                        case 1: exp *= 1.00f; break;
+                        case 2: exp *= 0.75f; break;
+                        case 3: exp *= 0.50f; break;
                         case 4: exp *= 0.25f; break;
                         case 5: exp *= 0.25f; break;
                         case 6: exp *= 0.25f; break;
